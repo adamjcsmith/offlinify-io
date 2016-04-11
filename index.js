@@ -1,13 +1,9 @@
 var http = require('http');
 var express = require('express');
 var app = express();
-var React = require('react');
-var jsx = require('node-jsx');
 
 var _ = require('lodash');
 var jade = require('jade');
-
-jsx.install();
 
 // view setup
 app.set('views', './views');
