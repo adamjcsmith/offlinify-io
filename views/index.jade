@@ -1,0 +1,15 @@
+html
+  head
+    title Offlinify: Take your Web Apps Offline
+    link(href='/static/bower_components/semantic/dist/semantic.min.css', rel='stylesheet')
+    link(href='/static/css/style.css', rel='stylesheet')
+  body
+    #overlay
+    .ui.middle.aligned.centered.grid.container(style='height:100%;')
+      .row
+        .center.aligned.column
+          h1.white.pacifico Offlinify
+    #content
+    script(src='/static/bower_components/react/react.min.js')
+    script(src='/static/bower_components/react/react-dom.min.js')
+    script(type='text/jsx', src='/static/js/cv-react.js')
