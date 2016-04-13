@@ -11,7 +11,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var sassOptions = { errLogToConsole: true, outputStyle: 'compressed' };
-var sassInput = 'static/sass/*.scss';
+var sassInput = ['static/bower_components/**/dist/*.css', '!static/bower_components/**/dist/*.min.css', 'static/**/*.scss'];
 var sassOutput = 'static/css';
 
 gulp.task('sass', function() {
