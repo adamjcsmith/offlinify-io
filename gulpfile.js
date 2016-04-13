@@ -15,9 +15,9 @@ var sassOutput = 'static/css';
 
 gulp.task('sass', function() {
   return gulp.src(sassInput)
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(gulp.dest(sassOutput))
     .pipe(sassdoc())
