@@ -1,6 +1,7 @@
 var http = require('http');
 var express = require('express');
 var app = express();
+var compression = require('compression');
 
 var _ = require('lodash');
 var jade = require('jade');
@@ -8,6 +9,9 @@ var jade = require('jade');
 // view setup
 app.set('views', './views');
 app.set('view engine', 'jade');
+
+// compression:
+app.use(compression());
 
 // static files
 app.use('/static', express.static('static'));

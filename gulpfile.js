@@ -9,6 +9,7 @@ var sass = require('gulp-sass');
 var sassdoc = require('sassdoc');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 var sassOptions = { errLogToConsole: true, outputStyle: 'compressed' };
 var sassInput = 'static/sass/*.scss';
 var sassOutput = 'static/css';
@@ -19,6 +20,7 @@ gulp.task('sass', function() {
     .pipe(sass(sassOptions).on('error', sass.logError))
     //.pipe(sourcemaps.write())
     .pipe(autoprefixer())
+    .pipe(concat('styles.css'))
     .pipe(gulp.dest(sassOutput))
     .pipe(sassdoc())
     .resume();
