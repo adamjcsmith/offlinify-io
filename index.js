@@ -17,6 +17,9 @@ app.set('view engine', 'jade');
 // compression:
 app.use(compression({level: 9}));
 
+// CORS:
+app.use(cors());
+
 // static files
 app.use('/static', express.static('static'));
 
