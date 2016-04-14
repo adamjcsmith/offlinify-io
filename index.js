@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
 });
 
 // api
-app.get('/get', function(req, res) {
+app.get('/api/get', function(req, res) {
 	var filteredData = jsonData;
 	if(req.query.after) {
       filteredData = _.filter(filteredData, function(o) {
@@ -36,7 +36,7 @@ app.get('/get', function(req, res) {
 	res.json(filteredData);
 });
 
-app.get('/getBig', function(req, res) {
+app.get('/api/getBig', function(req, res) {
 	var filteredData = jsonDataBig;
 	if(req.query.after) {
       filteredData = _.filter(filteredData, function(o) {
