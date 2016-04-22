@@ -49,7 +49,7 @@ app.get('/api/getBig', function(req, res) {
 	res.json(filteredData);
 });
 
-app.post('/post', function(req, res) {
+app.post('/api/post', function(req, res) {
 	console.log("Post request received.");
 });
 
