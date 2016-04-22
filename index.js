@@ -51,6 +51,7 @@ app.get('/api/getBig', function(req, res) {
 
 app.post('/api/post', function(req, res) {
 	console.log("Post request received.");
+  res.end('Received.');
 });
 
 // console
